@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.js"></script>
+    <link rel="stylesheet" href="01.css">
+</head>
+<body>
+  <div class="app">
+    <button
+     v-for='tab in tabs'
+     @click='currentTab= tab'
+     :key='tab'
+    >
+    {{tab}}
+  </button>
+  <keep-alive>
+    <component :is='currentComponent'></component>
+  </keep-alive>
+  </div>
+  <script src="01.js"></script>
+</body>
+</html>
